@@ -22,47 +22,41 @@ LIC_FILES_CHKSUM = "file://COPYING;md5=f4adc6286df4f727b4287ae730542d0d \
                     file://debian/copyright;md5=8db7bc9378cefbeddf0d43a4efdbd8b7"
 
 DEPENDS = "nanopb \
-    libmodbus-dev \
-    libudev-dev \
-    libglib2.0-dev \
-    libgtk2.0-dev \
-    libusb-1.0-0-dev \
+    libmodbus \
+    udev \
+    glib-2.0 \
+    libgtk2.0 \
+    libusb1 \
     python3 \
-    libpython3-dev \
-    cython3 \
-    dh-python \
+    python3-cython \
     pkg-config \
     psmisc \
-    libboost-dev \
-    libzmq3-dev \
-    libczmq-dev \
-    libjansson-dev \
-    libwebsockets-dev \
+    boost \
+    jansson \
+    libwebsockets \
     python3-zmq \
     procps \
-    liburiparser-dev \
-    libssl-dev \
+    uriparser \
+    openssl \
     python3-setuptools \
-    uuid-dev \
-    uuid-runtime \
-    libavahi-client-dev \
-    libcmocka-dev \
-    libprotobuf-dev \
+    util-linux \
+    cmocka \
+    libprotobuf \
     protobuf-compiler \
     python3-protobuf \
-    libprotoc-dev \
+    libprotoc \
     python3-simplejson \
     python3-sh \
     python3-installer \
     python3-pytest \
-    libcgroup-dev \
-    yapps2 \
-    python3-build \
-    python3-yapps \
+    libcgroup \
     python3-pyftpdlib \
-    python3-pip \
-    python3-venv \
-    libck-dev"
+    concurrencykit"
+
+RDEPENDS_${PN} = "python3 \
+                  avahi \
+                  czmq \
+                 "
 
 SRC_URI = "git://github.com/machinekit/machinekit-hal.git;protocol=https"
 
