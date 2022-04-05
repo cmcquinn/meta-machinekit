@@ -25,33 +25,26 @@ DEPENDS = "nanopb \
     libmodbus \
     udev \
     glib-2.0 \
-    libgtk2.0 \
     libusb1 \
     python3 \
     python3-cython \
-    pkg-config \
     psmisc \
     boost \
     jansson \
     libwebsockets \
-    python3-zmq \
+    python3-pyzmq \
     procps \
     uriparser \
     openssl \
     python3-setuptools \
     util-linux \
     cmocka \
-    libprotobuf \
-    protobuf-compiler \
     python3-protobuf \
-    libprotoc \
     python3-simplejson \
-    python3-sh \
-    python3-installer \
     python3-pytest \
     libcgroup \
-    python3-pyftpdlib \
-    concurrencykit"
+    pyftpdlib \
+    "
 
 RDEPENDS_${PN} = "python3 \
                   avahi \
@@ -59,6 +52,8 @@ RDEPENDS_${PN} = "python3 \
                  "
 
 SRC_URI = "git://github.com/machinekit/machinekit-hal.git;protocol=https"
+SRCREV = "${AUTOREV}"
+PV = "1.0+git${SRCPV}"
 
 S = "${WORKDIR}/git"
 
